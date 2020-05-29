@@ -1,0 +1,74 @@
+# Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of The Linux Foundation nor
+#       the names of its contributors may be used to endorse or promote
+#       products derived from this software without specific prior written
+#       permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+# the DIAG device node HAS TO BE world writable/readable, otherwise libdiag cant open the socket :/
+/dev/diag                 0777   system     oem_2950
+
+/dev/genlock              0666   system     system
+/dev/kgsl                 0666   system     system
+/dev/kgsl-3d0             0666   system     system
+/dev/kgsl-2d0             0666   root       root
+/dev/kgsl-2d1             0666   root       root
+/dev/ion                  0664   system     system
+/dev/rtc0                 0600   system     system
+/dev/smd0                 0660   system     system
+/dev/smd4                 0660   system     system
+/dev/smd5                 0660   system     system
+/dev/smd6                 0660   system     system
+
+# Permissions for CSVT
+/dev/graphics/*           0660   system     graphics
+
+# Permissions for audio
+/dev/ttyHSL0              0660   radio      system
+/dev/ttyHSL1              0660   system     system
+/dev/sdio_tty_ciq_00      0660   system     system
+/dev/tty_sdio_00          0660   system     system
+/dev/ttyGS0               0660   system     system
+/sys/devices/virtual/smdpkt/smdcntl*        open_timeout   0664 radio radio
+
+# Charger
+/dev/keychord             0660   system     system
+
+# Broadcast devices
+/dev/tsc_mux0             0660   media       media
+/dev/tsc_ci0              0660   media       media
+
+# Sensors
+/sys/devices/i2c-12/12-*                            pollrate_ms    0664    system   system
+/sys/devices/f9925000.i2c/i2c-0/0-*                 enable         0660    input    system
+/sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay     0660    input    system
+/sys/devices/virtual/input/input*                   poll           0660    input    system
+/sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
+
+# UIO devices
+/dev/uio0                 0660   system     system
+/dev/uio1                 0660   system     system
+/dev/uio2                 0660   system     system
+
+# Permission for dun
+/dev/dun                  0660   system     system
