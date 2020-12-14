@@ -4,5 +4,11 @@
 		"repository":"LineageOS/android_device_qcom_common",
 		"target_path":"device/qcom/common",
 		"revision":"cm-14.1"
+	},
+	{
+		"remote":"github",
+		"repository":"matteo0026/android_kernel_samsung_msm8226",
+		"target_path":"kernel/samsung/msm8226",
+		"revision":"android-7.1"
 	}
 ]
