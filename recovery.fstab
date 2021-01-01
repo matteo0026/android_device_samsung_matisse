@@ -3,9 +3,9 @@
 /system         ext4        /dev/block/platform/msm_sdcc.1/by-name/system
 /data           ext4        /dev/block/platform/msm_sdcc.1/by-name/userdata
 /cache          ext4        /dev/block/platform/msm_sdcc.1/by-name/cache
-/firmware       emmc        /dev/block/platform/msm_sdcc.1/by-name/modem    flags=display="Modem";backup=1
+/firmware       emmc        /dev/block/platform/msm_sdcc.1/by-name/modem    flags=display="Modem";backup=0
 /efs            ext4        /dev/block/platform/msm_sdcc.1/by-name/efs      flags=display="EFS";backup=1
-/persist        ext4        /dev/block/platform/msm_sdcc.1/by-name/persist  flags=display="Persist";backup=1
+/persist        ext4        /dev/block/platform/msm_sdcc.1/by-name/persist  flags=display="Persist";backup=0
 /misc           emmc        /dev/block/platform/msm_sdcc.1/by-name/fota     flags=display="Misc"
 
 /external_sd    auto        /dev/block/mmcblk1p1   /dev/block/mmcblk1       flags=display="Micro SDcard";storage;wipeingui;removable
