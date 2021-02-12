@@ -55,7 +55,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 
 # TWRP
-TW_DEVICE_VERSION :=
+TW_DEVICE_VERSION := 1
 TW_THEME := landscape_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
@@ -67,7 +67,6 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT_FUSE := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
-TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_TWRPAPP := true
 
 # Init properties from bootloader version, ex. model info
